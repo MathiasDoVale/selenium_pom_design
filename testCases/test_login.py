@@ -19,13 +19,13 @@ class Test_001_Login:
         self.driver.get(self.baseURL)
         act_title = self.driver.title
         if act_title == "Your store. Login":
-            assert True
-            self.driver.close()
             self.logger.info("**************** Home Page title test is passed ****************")
+            self.driver.close()
+            assert True
         else:
+            self.logger.error("**************** Home Page title test failed ****************")
             self.driver.save_screenshot("\\.screenshots\\"+"test_homePageTitle.png")
             self.driver.close()
-            self.logger.error("**************** Home Page title test failed ****************")
             assert False
     
     def test_login(self, setup):
@@ -39,11 +39,11 @@ class Test_001_Login:
         act_title = self.driver.title
 
         if act_title == "Dashboard / nopCommerce administration":
-            assert True
-            self.driver.close()
             self.logger.info("**************** Login Test is passed ****************")
+            self.driver.close()
+            assert True
         else:
+            self.logger.error("**************** Login Test failed ****************")
             self.driver.save_screenshot(".\\screenshots\\"+"test_login.png")
             self.driver.close()
-            self.logger.error("**************** Login Test failed ****************")
             assert False
