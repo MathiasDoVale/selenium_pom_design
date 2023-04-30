@@ -19,3 +19,7 @@ Backend: https://admin-demo.nopcommerce.com/login
 - [Pytest-xdist]
 - [Openpyxl]
 - [Allure-pytest]
+
+
+### Commands: 
+pytest -s -v  -n=2 --html=reports\\report.html testCases\\test_login.py
