@@ -20,6 +20,12 @@ Backend: https://admin-demo.nopcommerce.com/login
 - [Openpyxl]
 - [Allure-pytest]
 
-
 ### Commands: 
 pytest -s -v  -n=2 --html=reports\\report.html testCases\\test_login.py
+
+### Tests
+-   test_homePageTitle
+-   test_login
+-   test_addNewCustomer
+-   test_searchCustomerByEmail
+-   test_searchCustomerByName
