@@ -58,11 +58,6 @@ class AddCustomer:
         else:
             self.driver.maximize_window()
             self.driver.find_element(By.XPATH, '/html[1]/body[1]/div[3]/div[1]/form[1]/section[1]/div[1]/div[1]/nop-cards[1]/nop-card[1]/div[1]/div[2]/div[10]/div[2]/div[1]/div[1]/div[1]/div[1]').click()
-            """ i=0
-            for div in unselectable_divs:
-                i+=1
-                if i == 2:
-                    div.click() """
             time.sleep(2)
             if(role=='Administrators'):
                 option = self.driver.find_element(By.XPATH, "/html[1]/body[1]/div[6]/div[1]/div[2]/ul[1]/li[1]")
