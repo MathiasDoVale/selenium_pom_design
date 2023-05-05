@@ -4,6 +4,7 @@ from pageObjects.LoginPage import LoginPage
 from pageObjects.AddCustomerPage import AddCustomer
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
+from selenium.webdriver.common.by import By
 import string
 import random
 
@@ -27,12 +28,11 @@ class Test_003_AddCustomer:
         self.logger.info("******* Starting Add Customer Test **********")
 
         self.addcust = AddCustomer(self.driver)
-        self.addcust.clickSideBarMenu()
-        time.sleep(3)
+        time.sleep(1)
         self.addcust.clickOnCustomersMenu()
-        time.sleep(3)
+        time.sleep(1)
         self.addcust.clickOnCustomersMenuItem()
-        time.sleep(3)
+        time.sleep(1)
         self.addcust.clickOnAddnew()
 
         self.logger.info("************* Providing customer info **********")
@@ -41,8 +41,6 @@ class Test_003_AddCustomer:
         self.addcust.setEmail(self.email)
         self.addcust.setPassword("test123")
         self.addcust.setCustomerRoles("Guests")
-
-        self.logger.info("************* LLego aca **********")
         self.addcust.setManagerOfVendor("Vendor 2")
         self.addcust.setGender("Male")
         self.addcust.setFirstName("Mathias")
@@ -56,7 +54,7 @@ class Test_003_AddCustomer:
 
         self.logger.info("********* Add customer validation started *****************")
 
-        self.msg = self.driver.find_element_by_tag_name("body").text
+        self.msg = self.driver.find_element(By.TAG_NAME, "body").text
 
         print(self.msg)
         if 'customer has been added successfully.' in self.msg:

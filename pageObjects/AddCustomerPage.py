@@ -1,7 +1,8 @@
 import time
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from utilities.customLogger import LogGen
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class AddCustomer:
     # Add customer Page
@@ -26,10 +27,9 @@ class AddCustomer:
     txtAdminContent_xpath = "//textarea[@id='AdminComment']"
     btnSave_xpath = "//button[@name='save']"
 
-    logger = LogGen.loggen()  # Logger
-
     def __init__(self, driver):
         self.driver = driver
+        
 
     def clickSideBarMenu(self):
         self.driver.find_element(By.ID, self.lnkSide_bar_menu_id).click()
@@ -49,17 +49,46 @@ class AddCustomer:
     def setPassword(self,password):
         self.driver.find_element(By.XPATH, self.txtPassword_xpath).send_keys(password)
 
-    def setCustomerRoles(self,role):
-        if role not in( 'Registered',
-                        'Administrators',
+    def setCustomerRoles(self, role):
+        if role not in( 'Administrators',
                         'Forum Moderators',
                         'Guests',
                         'Vendors'):
-            
-            
-        self.driver.deselect_by_value('Registered')
-        if role=='Registered':
+            raise ValueError("Role is not available")
+        else:
+            self.driver.maximize_window()
+            unselectable_divs = self.driver.find_elements(By.XPATH, '//div[@class="k-widget k-multiselect k-multiselect-clearable"]')
+            i=0
+            for div in unselectable_divs:
+                i+=1
+                self.driver.execute_script("arguments[0].removeAttribute('unselectable')", div)
+                if i == 2:
+                    div.click()
+            time.sleep(2)
+            if(role=='Administrators'):
+                option = self.driver.find_element(By.XPATH, "/html[1]/body[1]/div[6]/div[1]/div[2]/ul[1]/li[1]")
+                self.driver.execute_script("arguments[0].removeAttribute('unselectable')", option)
+                option.click()
+            elif(role=='Forum Moderators'):
+                option = self.driver.find_element(By.XPATH, "/html[1]/body[1]/div[6]/div[1]/div[2]/ul[1]/li[2]")
+                self.driver.execute_script("arguments[0].removeAttribute('unselectable')", option)
+                option.click()
+            elif(role=='Registered'):
+                option = self.driver.find_element(By.XPATH, "//html[1]/body[1]/div[6]/div[1]/div[2]/ul[1]/li[3]")
+                self.driver.execute_script("arguments[0].removeAttribute('unselectable')", option)
+                option.click()
+            elif(role=='Guests'):
+                #Business Rule. If a customer is Guest, can not be Registrered
+                delete_span = self.driver.find_element(By.XPATH, "/html[1]/body[1]/div[3]/div[1]/form[1]/section[1]/div[1]/div[1]/nop-cards[1]/nop-card[1]/div[1]/div[2]/div[10]/div[2]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/span[2]")
+                delete_span.click()
 
+                option = self.driver.find_element(By.XPATH, "//html[1]/body[1]/div[6]/div[1]/div[2]/ul[1]/li[3]")
+                self.driver.execute_script("arguments[0].removeAttribute('unselectable')", option)
+                option.click()
+            elif(role=='Vendors'):
+                option = self.driver.find_element(By.XPATH, "/html[1]/body[1]/div[6]/div[1]/div[2]/ul[1]/li[5]")
+                self.driver.execute_script("arguments[0].removeAttribute('unselectable')", option)
+                option.click()
 
     def setManagerOfVendor(self,value):
         drp=Select(self.driver.find_element(By.XPATH, self.drpmgrOfVendor_xpath))
