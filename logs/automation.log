@@ -522,3 +522,36 @@
 05/05/2023 12:23:32 PM: INFO: ********* Add customer validation started *****************
 05/05/2023 12:23:32 PM: INFO: ********* Add customer Test Passed *********
 05/05/2023 12:23:32 PM: INFO: ******* Ending Add customer test **********
+05/05/2023 04:45:21 PM: INFO: ************* SearchCustomerByEmail_004 **********
+05/05/2023 04:45:25 PM: INFO: ************* Login succesful **********
+05/05/2023 04:45:25 PM: INFO: ******* Starting Search Customer By Email **********
+05/05/2023 04:45:26 PM: INFO: ************* searching customer by emailID **********
+05/05/2023 04:52:10 PM: INFO: ************* SearchCustomerByEmail_004 **********
+05/05/2023 04:52:14 PM: INFO: ************* Login succesful **********
+05/05/2023 04:52:14 PM: INFO: ******* Starting Search Customer By Email **********
+05/05/2023 04:52:14 PM: INFO: ************* searching customer by emailID **********
+05/05/2023 04:52:34 PM: INFO: ************* SearchCustomerByEmail_004 **********
+05/05/2023 04:52:38 PM: INFO: ************* Login succesful **********
+05/05/2023 04:52:38 PM: INFO: ******* Starting Search Customer By Email **********
+05/05/2023 04:52:56 PM: INFO: ************* SearchCustomerByEmail_004 **********
+05/05/2023 04:53:02 PM: INFO: ************* Login succesful **********
+05/05/2023 04:53:02 PM: INFO: ******* Starting Search Customer By Email **********
+05/05/2023 04:53:03 PM: INFO: ************* searching customer by emailID **********
+05/05/2023 05:00:09 PM: INFO: ************* SearchCustomerByEmail_004 **********
+05/05/2023 05:00:17 PM: INFO: ************* Login succesful **********
+05/05/2023 05:00:17 PM: INFO: ******* Starting Search Customer By Email **********
+05/05/2023 05:00:17 PM: INFO: ************* searching customer by emailID **********
+05/05/2023 05:00:36 PM: INFO: ************* SearchCustomerByEmail_004 **********
+05/05/2023 05:00:41 PM: INFO: ************* Login succesful **********
+05/05/2023 05:00:41 PM: INFO: ******* Starting Search Customer By Email **********
+05/05/2023 05:00:42 PM: INFO: ************* searching customer by emailID **********
+05/05/2023 05:00:48 PM: INFO: ***************  TC_SearchCustomerByEmail_004 Finished  *********** 
+05/05/2023 05:02:30 PM: INFO: ************* SearchCustomerByName_005 **********
+05/05/2023 05:02:36 PM: INFO: ************* Login succesful **********
+05/05/2023 05:02:36 PM: INFO: ******* Starting Search Customer By Name **********
+05/05/2023 05:02:38 PM: INFO: ************* searching customer by Name **********
+05/05/2023 05:03:12 PM: INFO: ************* SearchCustomerByName_005 **********
+05/05/2023 05:03:16 PM: INFO: ************* Login succesful **********
+05/05/2023 05:03:16 PM: INFO: ******* Starting Search Customer By Name **********
+05/05/2023 05:03:18 PM: INFO: ************* searching customer by Name **********
+05/05/2023 05:03:24 PM: INFO: ***************  TC_SearchCustomerByName_005 Finished  *********** 
