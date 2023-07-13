@@ -623,3 +623,35 @@
 07/13/2023 02:18:49 PM: INFO: ******* Starting Search Customer By Email **********
 07/13/2023 02:18:51 PM: INFO: ************* searching customer by emailID **********
 07/13/2023 02:18:56 PM: INFO: ***************  TC_SearchCustomerByEmail_004 Finished  *********** 
+07/13/2023 04:04:08 PM: INFO: ************* Test_003_AddCustomer **********
+07/13/2023 04:04:13 PM: INFO: ************* Login succesful **********
+07/13/2023 04:04:13 PM: INFO: ******* Starting Add Customer Test **********
+07/13/2023 04:04:17 PM: INFO: ************* Providing customer info **********
+07/13/2023 04:04:21 PM: INFO: ************* Saving customer info **********
+07/13/2023 04:04:21 PM: INFO: ********* Add customer validation started *****************
+07/13/2023 04:04:21 PM: INFO: ********* Add customer Test Passed *********
+07/13/2023 04:04:21 PM: INFO: ******* Ending Add customer test **********
+07/13/2023 04:04:22 PM: INFO: **************** Test_001_Login ****************
+07/13/2023 04:04:22 PM: INFO: **************** Verifying Home Page Title ****************
+07/13/2023 04:04:24 PM: INFO: **************** Home Page title test is passed ****************
+07/13/2023 04:04:25 PM: INFO: **************** Verifying Login Test ****************
+07/13/2023 04:04:27 PM: INFO: **************** Login Test is passed ****************
+07/13/2023 04:04:28 PM: INFO: ******* Starting Test_002_DDT_Login Test **********
+07/13/2023 04:04:28 PM: INFO: ******* Starting Login DDT Test **********
+07/13/2023 04:04:36 PM: INFO: **** passed ****
+07/13/2023 04:04:43 PM: INFO: **** passed ****
+07/13/2023 04:04:48 PM: INFO: **** passed ****
+07/13/2023 04:04:53 PM: INFO: **** passed ****
+07/13/2023 04:04:53 PM: INFO: ******* DDT Login test passed **********
+07/13/2023 04:04:53 PM: INFO: ******* End of Login DDT Test **********
+07/13/2023 04:04:53 PM: INFO: **************** Completed  TC_LoginDDT_002 ************* 
+07/13/2023 04:04:54 PM: INFO: ************* SearchCustomerByEmail_004 **********
+07/13/2023 04:04:57 PM: INFO: ************* Login succesful **********
+07/13/2023 04:04:57 PM: INFO: ******* Starting Search Customer By Email **********
+07/13/2023 04:04:59 PM: INFO: ************* searching customer by emailID **********
+07/13/2023 04:05:04 PM: INFO: ***************  TC_SearchCustomerByEmail_004 Finished  *********** 
+07/13/2023 04:05:05 PM: INFO: ************* SearchCustomerByName_005 **********
+07/13/2023 04:05:07 PM: INFO: ************* Login succesful **********
+07/13/2023 04:05:07 PM: INFO: ******* Starting Search Customer By Name **********
+07/13/2023 04:05:10 PM: INFO: ************* searching customer by Name **********
+07/13/2023 04:05:16 PM: INFO: ***************  TC_SearchCustomerByName_005 Finished  *********** 
