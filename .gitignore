@@ -1,3 +1,4 @@
 *.exe
 *.env
-/venv_pom
+.log
+/venv_selenium_pom_design

@@ -28,8 +28,8 @@ class Test_SearchCustomerByName_005:
 
         self.addcust = AddCustomer(self.driver)
         self.addcust.clickOnCustomersMenu()
-        self.addcust.clickOnCustomersMenuItem()
         time.sleep(2)
+        self.addcust.clickOnCustomersMenuItem()
 
         self.logger.info("************* searching customer by Name **********")
         searchcust = SearchCustomer(self.driver)

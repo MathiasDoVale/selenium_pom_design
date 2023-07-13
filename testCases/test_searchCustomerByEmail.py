@@ -28,6 +28,7 @@ class Test_SearchCustomerByEmail_004:
 
         self.addcust = AddCustomer(self.driver)
         self.addcust.clickOnCustomersMenu()
+        time.sleep(1)
         self.addcust.clickOnCustomersMenuItem()
 
         self.logger.info("************* searching customer by emailID **********")
